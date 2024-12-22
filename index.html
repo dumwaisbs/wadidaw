@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ffe4e1, #f8bbd0);
+            color: #6a1b9a;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: transparent;
+            transition: background-color 0.3s ease, box-shadow 0.3s;
+            border-bottom: 2px solid #ec407a;
+        }
+
+        .navbar.scrolled {
+            background-color: #f48fb1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-family: 'Parisienne', cursive;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .header {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background-color: #f8bbd0;
+            color: white;
+            animation: fadeInDown 2s;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+        }
+
+        .gallery-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            height: 300px; /* Set a fixed height for the card */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-card:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-card img {
+            object-fit: cover; /* Make sure the image covers the area of the card */
+            height: 100%;
+            width: 100%;
+        }
+        .spotify-embed {
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 80px;
+        }
+
+        .about {
+            background-color: #ffe4e1;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            animation: fadeInLeft 2s;
+        }
+
+        .proposal {
+            text-align: center;
+            padding: 50px;
+            background-color: #f8bbd0;
+            color: white;
+            animation: fadeInUp 2s;
+        }
+
+        .proposal button {
+            background-color: #6a1b9a;
+            border: none;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .proposal button:hover {
+            background-color: #4a148c;
+            transform: scale(1.1);
+        }
+
+        .decision {
+            margin-top: 20px;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            display: none;
+        }
+
+        footer {
+            background-color: #f48fb1;
+            color: white;
+            transition: transform 0.3s;
+            border-top: 2px solid #ec407a;
+        }
+
+        footer:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">For Athira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#playlist">Playlist</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>For Athira</h1>
+        <p>Sayangku yang tercantik</p>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="about text-center">
+                <h2>About This Website</h2>
+                <p>Website ini dibuat dengan tujuan yang sangat mulia, yaitu untuk mengsahkan hubungan yang terombang-ambing ini. Kadang rasanya kayak diombang-ambing antara benci dan cinta, tapi yaudahlah, kita coba aja biar jelas dan gak bingung lagi. Semoga dengan adanya website ini, semua kebingungannya bisa sedikit teratasi, kalau nggak ya setidaknya bisa ketawa bareng deh!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Gallery</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="webcam-toy-photo7.jpg" class="card-img-top" alt="Memory 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="2.jpg" class="card-img-top" alt="Memory 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="3.jpg" class="card-img-top" alt="Memory 3">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="webcam-toy-photo6.jpg" class="card-img-top" alt="Memory 4">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="5.jpg" class="card-img-top" alt="Memory 5">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="6.jpg" class="card-img-top" alt="Memory 6">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="7.jpg" class="card-img-top" alt="Memory 7">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="webcam-toy-photo8.jpg" class="card-img-top" alt="Memory 8">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card gallery-card">
+                        <img src="webcam-toy-photo9.jpg" class="card-img-top" alt="Memory 9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="playlist" class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Playlist</h2>
+          <div class="d-flex justify-content-center">
+              <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/0whWo8KApfhWjzPIQpyFG2" allow="encrypted-media"></iframe>
+          </div>
+      </div>
+  </section>
+
+    <section id="proposal" class="py-5">
+        <div class="container">
+            <div class="proposal">
+                <h2>Mau tak jadi pacarku?</h2>
+                <p>Setelah percobaan ke 6 dalam 8 bulan terakhir, ini percobaan ke 7 dan yang terakhir aku nembak kamu dehh</p>
+                <canvas class="confetti"></canvas>
+                <div class="decision">
+                    <button id="yesBtn" class="btn btn-primary btn-lg me-3">Yes</button>
+                    <button id="noBtn" class="btn btn-danger btn-lg">No</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4">
+        <p>&copy; Punya Yusril</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+    <script>
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const confetti = document.querySelector('.confetti');
+
+        function startConfetti() {
+            confetti.style.display = 'block';
+            const end = Date.now() + 5 * 1000;
+
+            (function frame() {
+                canvasConfetti({
+                    particleCount: 2,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                });
+                canvasConfetti({
+                    particleCount: 2,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                } else {
+                    confetti.style.display = 'none';
+                }
+            })();
+        }
+
+        yesBtn.addEventListener('click', () => {
+            const audio = new Audio('yes.mp3');
+            audio.play();
+        });
+
+        noBtn.addEventListener('click', () => {
+            const audio = new Audio('No.mp3');
+            audio.play();
+        });
+    </script>
+</body>
+</html>
